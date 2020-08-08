@@ -45,12 +45,12 @@ elif len(sys.argv) == 2:
   else:
     print("month value must be between 1 and 12")
 elif len(sys.argv) == 3:
-  if int(sys.argv[1]) > 0 and int(sys.argv[1]) < 13 and int(sys.argv[2]) > 0:
+  if int(sys.argv[1]) > 0 and int(sys.argv[1]) < 13 and int(sys.argv[2]) > 999:
       month = int(sys.argv[1])
       year = int(sys.argv[2])
       print("Choice Month for Chocie Year:")
       print(cal.formatmonth(year, month))
   else:
-    print("month value must be between 1 and 12, and year value cant be 0")
+    print("month value must be between 1 and 12, and year value needs 4 digits")
 else:
   print("format should be [month][year]")
