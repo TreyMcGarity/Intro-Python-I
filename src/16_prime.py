@@ -1,6 +1,10 @@
 num = input("Input a number to see if it's prime.")
-if int(num) % 2 == 0 and int(num) % 3 == 0 and int(num) % 5 == 0 and int(num) % 7 == 0:
-    print("Not prime.")
+if int(num) > 1:
+   for i in range(2,int(num)): #from 2 to inputted number check..
+       if (int(num) % i) == 0: #if num is divisable by value in range
+           print("not Prime")  #no remainder means not prime
+           break
+   else:
+       print("Prime!") #any remainder means prime
 else:
-    print("Prime!")
-    
+   print("not Prime") #1 is not a prime number
